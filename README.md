@@ -12,7 +12,7 @@ A fully functional (and visually respectable) one-page website, including the fo
 
 # Why do I need this?
 
-If you need to build a simple one page website—little more than a website-as-business-card—using a CMS is overkill. The ongoing maintenance is more taxing than the site is worth.
+If you need to build a simple one page website—little more than a website-as-business-card—using a CMS like WordPress is overkill. The ongoing maintenance is more taxing than the site is worth.
 
 But that CMS does a lot of things for your site that you may not be aware of. A modern website is more than just HTML and CSS. How do you re-create some of those features from scratch?
 
