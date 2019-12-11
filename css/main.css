@@ -1,0 +1,266 @@
+/* ROOT */
+
+:root {
+	--color-background: #000;
+	--color-text: #fff;
+	--color-primary: #4287f5;
+	--color-primary-transparent: rgba(66, 135, 245, 0.50);
+	--font-body: 'Roboto', sans-serif;
+	--font-headers: 'Roboto Slab', serif;
+}
+
+/* FOUNDATION STYLES */
+
+html {
+	position: relative;
+	min-height: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+* {
+	font-family: var(--font-body);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	background: var(--color-background);
+	width: 100%;
+	overflow-x: hidden;
+	overscroll-behavior: contain;
+	color: var(--color-text);
+	padding: 0;
+	margin: 0 0 60px 0;/* Must correspond to footer height */
+}
+
+#content {
+	margin-top: 10px;
+	margin-bottom: 80px;/* Up far enough to create distance from the footer */
+}
+
+#footer {
+	height: 60px;/* Must correspond to body margin-bottom */
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: none;
+}
+
+.smaller {
+	font-size: 80%;
+}
+
+.larger {
+	font-size: 120%;
+}
+
+.hidden {
+	display: none;
+}
+
+.break-word {
+	-webkit-word-break: break-word;
+			word-break: break-word;
+	-webkit-word-wrap: break-word;
+			word-wrap: break-word;
+	overflow-wrap: break-word;
+	-webkit-hyphens: auto;
+	   -moz-hyphens: auto;
+	    -ms-hyphens: auto;
+			hyphens: auto;
+}
+
+.no-bullet {
+	list-style-type: none;
+	list-style-position: inside;
+	padding: 0;
+	margin: 0;
+}
+
+/* HEADER */
+
+#header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 40px;
+	color: var(--color-text);
+	background-color: var(--color-primary);
+}
+
+/* CHECKERBOARD */
+
+#checkerboard-wrapper {
+	height: 300px;
+	margin-top: -100px;
+	perspective: 600px;
+	overflow-x: hidden;
+}
+
+#checkerboard	{
+	position: absolute;
+	bottom: -30%;
+	right: -60%;
+	height: 150%;
+	width: 200%;
+	transform: rotateX(75deg);
+	transform-origin: center center;
+	transform-style: preserve-3d;
+	background-color: var(--color-primary);
+	background-size: 100px 100px;
+	background-position: 0 0, 50px 50px;
+	background-image: linear-gradient(45deg, var(--color-background) 25%, transparent 25%, transparent 75%, var(--color-background) 75%, var(--color-background)), linear-gradient(45deg, var(--color-background) 25%, transparent 25%, transparent 75%, var(--color-background) 75%, var(--color-background));
+	animation: move-background 3s linear infinite;
+}
+
+#checkerboard:after {
+	content: '';
+	display: block;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(var(--color-primary), transparent);
+}
+
+@keyframes move-background {
+	to {
+		background-position: 0 100px, 50px 150px;
+	}
+}
+
+/* FOOTER */
+
+#footer {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	overflow: hidden;
+	color: var(--color-text);
+	background-color: var(--color-primary);
+	bottom: 0;
+	width: 100%;
+}
+
+#footer #copyright {
+	font-size: 18px;
+	margin: 5px 0;
+}
+
+#footer #copyright p {
+	margin: 0;
+}
+
+#footer #copyright a:link,
+#footer #copyright a:visited {
+	color: inherit;
+}
+
+#footer #copyright a:hover,
+#footer #copyright a:active {
+	color: var(--color-primary);
+	filter: brightness(50%);
+}
+
+/* CONTENT */
+
+#content p,
+#content ul {
+	line-height: 200%;
+	margin-bottom: 1.5em;
+}
+
+@media screen and (max-width: 480px) {
+	#content p,
+	#content ul {
+		font-size: 1.15em;
+	}
+}
+
+@media screen and (min-width: 481px) {
+	#content p,
+	#content ul {
+		font-size: 1.25em;
+	}
+}
+
+#content p a:link,
+#content p a:visited,
+#content p a:hover,
+#content p a:active,
+#content ul a:link,
+#content ul a:visited,
+#content ul a:hover,
+#content ul a:active {
+	color: inherit;
+	text-decoration: none;
+}
+
+#content p a,
+#content ul a {
+	background-color: rgba(0, 0, 0, 0);
+	-webkit-box-shadow: inset 0 -4px 0 var(--color-primary-transparent);
+	-moz-box-shadow: inset 0 -4px 0 var(--color-primary-transparent);
+	box-shadow: inset 0 -4px 0 var(--color-primary-transparent);
+	-webkit-transition: -webkit-box-shadow 0.3s linear, background-color 0.3s linear;
+	-moz-transition: -moz-box-shadow 0.3s linear, background-color 0.3s linear;
+	-o-transition: box-shadow 0.3s linear, background-color 0.3s linear;
+	-ms-transition: box-shadow 0.3s linear, background-color 0.3s linear;
+	transition: box-shadow 0.3s linear, background-color 0.3s linear;
+}
+
+#content p a:hover,
+#content ul a:hover {
+	background-color: var(--color-primary-transparent);
+	-webkit-box-shadow: inset 0 0 0 var(--color-primary-transparent);
+	   -moz-box-shadow: inset 0 0 0 var(--color-primary-transparent);
+			box-shadow: inset 0 0 0 var(--color-primary-transparent);
+}
+
+#content ul {
+	list-style-type: square;
+}
+
+#content li {
+	margin: 1em 0;
+}
+
+#content h1, #content .h1,
+#content h2, #content .h2,
+#content h3, #content .h3,
+#content h4, #content .h4,
+#content h5, #content .h5,
+#content h6, #content .h6 {
+	font-family: var(--font-headers);
+	margin: 1em 0;
+	text-align: center;
+}
+
+#content h1 span, #content .h1 span,
+#content h2 span, #content .h2 span,
+#content h3 span, #content .h3 span,
+#content h4 span, #content .h4 span,
+#content h5 span, #content .h5 span,
+#content h6 span, #content .h6 span {
+	font-family: inherit;
+}
+
+/* SPACERS */
+
+.spacer0 { height: 0; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; clear: both; }
+.spacer5 { height: 5px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; clear: both; }
+.spacer10 { height: 10px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; clear: both; }
+.spacer15 { height: 15px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; clear: both; }
+.spacer20 { height: 20px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; clear: both; }
+.spacer25 { height: 25px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; clear: both; }
+.spacer30 { height: 30px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; clear: both; }
+.spacer35 { height: 35px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; clear: both; }
+.spacer40 { height: 40px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; clear: both; }
+.spacer45 { height: 45px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; clear: both; }
+.spacer50 { height: 50px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; clear: both; }
+.spacer100 { height: 100px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; clear: both; }
+.spacer200 { height: 200px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; clear: both; }
