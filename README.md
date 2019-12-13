@@ -10,6 +10,10 @@ A fully functional (and visually respectable) one-page website, including the fo
 1. Google Analytics
 1. Sitemap
 
+# Demo
+
+https://onepager.peterscene.com/
+
 # Why do I need this?
 
 If you need to build a simple one page website—little more than a website-as-business-card—using a CMS like WordPress is overkill. The ongoing maintenance is more taxing than the site is worth.
