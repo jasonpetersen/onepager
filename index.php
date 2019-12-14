@@ -1,11 +1,11 @@
 <?php
 @ini_set('display_errors', 0);
 
-define("COMPANY_NAME", "Awesome Company");
-define("COMPANY_TAGLINE", "Doing work better than others");
+define("COMPANY_NAME", "Awesome Co.");
+define("COMPANY_TAGLINE", "Doing work awesomely");
 
 define("HOMEPAGE_TITLE", COMPANY_NAME . " | " . COMPANY_TAGLINE);
-define("HOMEPAGE_DESC", "Awesome Company is a company like none other. Other companies are companies, but this company is a better company.");
+define("HOMEPAGE_DESC", "Awesome Co. is a company like none other. Other companies are companies, but this company is a better company.");
 
 define("COPYRIGHT_TEXT", "&copy; " . date("Y") . " " . COMPANY_NAME);
 
@@ -61,7 +61,7 @@ define("ESCAPEDURL", htmlspecialchars(THISURL, ENT_QUOTES, 'UTF-8'));
 			<div class="container-fluid text-center break-word">
 				<div class="row">
 					<div class="col-md-12">
-						<img itemprop="logo" src="/img/logo-full.png" class="img-fluid" alt="<?php echo COMPANY_NAME; ?> Logo">
+						<img itemprop="logo" src="/img/logo-full.png" id="company-logo" class="img-fluid" alt="<?php echo COMPANY_NAME; ?> Logo">
 					</div>
 				</div>
 				<div class="row">
