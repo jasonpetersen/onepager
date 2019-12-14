@@ -4,7 +4,7 @@ A fully functional (and visually respectable) one-page website, including the fo
 
 1. Responsive design
 1. Structured data
-1. .htaccess rewrites
+1. Apache rewrites
 1. 404 page
 1. Comprehensive favicons
 1. Google Analytics
