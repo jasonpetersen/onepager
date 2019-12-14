@@ -172,7 +172,7 @@ a:active {
 #company-logo {
 	padding: 20px 0;
 	max-height: 30vh;
-	
+	cursor: default;
 }
 
 #content p,

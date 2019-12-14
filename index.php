@@ -61,7 +61,7 @@ define("ESCAPEDURL", htmlspecialchars(THISURL, ENT_QUOTES, 'UTF-8'));
 			<div class="container-fluid text-center break-word">
 				<div class="row">
 					<div class="col-md-12">
-						<img itemprop="logo" src="/img/logo-full.png" id="company-logo" class="img-fluid" alt="<?php echo COMPANY_NAME; ?> Logo">
+						<a itemprop="url" href="<?php echo THISDOMAIN; ?>" onclick="return false;"><img itemprop="logo" src="<?php echo THISDOMAIN; ?>/img/logo-full.png" id="company-logo" class="img-fluid" alt="<?php echo COMPANY_NAME; ?> Logo"></a>
 					</div>
 				</div>
 				<div class="row">
@@ -81,7 +81,7 @@ define("ESCAPEDURL", htmlspecialchars(THISURL, ENT_QUOTES, 'UTF-8'));
 					</div>
 					<div class="col-md-12 col-lg-4">
 						<h2>Email</h2>
-						<p><a href="mailto:hello@company.com"><span itemprop="email">hello@company.com</span></a></p>
+						<p><a href="mailto:hello@awesome.co"><span itemprop="email">hello@awesome.co</span></a></p>
 					</div>
 					<div class="col-md-12 col-lg-4">
 						<h2>Phone</h2>
