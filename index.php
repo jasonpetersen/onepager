@@ -48,11 +48,11 @@ define("ESCAPEDURL", htmlspecialchars(THISURL, ENT_QUOTES, 'UTF-8'));
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
 		<link rel="manifest" href="/favicons/site.webmanifest">
-		<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#4287f5">
+		<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#846716">
 		<link rel="shortcut icon" href="/favicons/favicon.ico">
-		<meta name="msapplication-TileColor" content="#2d89ef">
+		<meta name="msapplication-TileColor" content="#f09609">
 		<meta name="msapplication-config" content="/favicons/browserconfig.xml">
-		<meta name="theme-color" content="#ffffff">
+		<meta name="theme-color" content="#f7f1e5">
 	</head>
 	<body itemscope itemtype="http://schema.org/Organization">
 		<header id="header"></header>
