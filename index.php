@@ -37,7 +37,7 @@ define("ESCAPEDURL", htmlspecialchars(THISURL, ENT_QUOTES, 'UTF-8'));
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="author" content="<?php echo COMPANY_NAME; ?>">
 		<link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:700&display=fallback" as="style" onload="this.onload=null;this.rel='stylesheet'">
-		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<link rel="preload" href="/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 		<meta property="og:title" content="<?php echo HOMEPAGE_TITLE; ?>">
 		<meta property="og:description" content="<?php echo HOMEPAGE_DESC; ?>">
