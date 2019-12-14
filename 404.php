@@ -16,6 +16,7 @@ header("HTTP/1.0 404 Not Found");
 	<body id="error">
     	<div class="fof">
 				<h1>Error 404</h1>
+				<p><a href="/">Go to home</a></p>
 		</div>
 	</div>
 	</body>
