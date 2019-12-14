@@ -148,7 +148,7 @@ a:active {
 }
 
 #footer #copyright {
-	font-size: 18px;
+	font-size: 1.15em;
 	margin: 5px 0;
 }
 
@@ -170,9 +170,15 @@ a:active {
 /* CONTENT */
 
 #company-logo {
-	padding: 20px 0;
 	max-height: 30vh;
+	padding: 20px 0;
 	cursor: default;
+}
+
+@media screen and (max-width: 767px) {
+	#company-logo {
+		max-height: 50vh;
+	}
 }
 
 #content p,
