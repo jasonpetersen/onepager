@@ -12,8 +12,15 @@ define("COPYRIGHT_TEXT", "&copy; " . date("Y") . " " . COMPANY_NAME);
 define("ATTRIBUTION_TEXT", "Site design by Peterscene");
 define("ATTRIBUTION_URL", "https://peterscene.com");
 
+$isSecure = false;
+if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
+	$isSecure = true;
+} elseif (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' || !empty($_SERVER['HTTP_X_FORWARDED_SSL']) && $_SERVER['HTTP_X_FORWARDED_SSL'] == 'on') {
+	$isSecure = true;
+}
+
 define("THISPAGE", $_SERVER["REQUEST_URI"]);
-define("THISPROTOCOL", stripos($_SERVER["SERVER_PROTOCOL"], "https") === 0 ? "https://" : "http://");
+define("THISPROTOCOL", ($isSecure) ? 'https://' : 'http://');
 define("THISDOMAIN", THISPROTOCOL . $_SERVER["HTTP_HOST"]);
 define("THISURL", THISDOMAIN . THISPAGE);
 define("ESCAPEDURL", htmlspecialchars(THISURL, ENT_QUOTES, 'UTF-8'));
